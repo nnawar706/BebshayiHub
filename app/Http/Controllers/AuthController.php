@@ -4,7 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AuthCotroller extends Controller
+class AuthController extends Controller
 {
-    //
+    public function index_registration()
+    {
+        return view('auth/register');
+    }
+
+    public function index_login()
+    {
+        return view('auth/login');
+    }
 }
