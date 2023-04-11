@@ -16,16 +16,19 @@
                     </button>
                 </div>
 
-                <form id="company" class="input-group">
-                    <input type="text" class="input-field" placeholder="Email">
-                    <input type="password" class="input-field" placeholder="Password">
+                <form action="{{ route('register') }}" method="post" id="company" class="input-group">
+                    @csrf
+                    <input type="email" class="input-field" name="email" placeholder="Email" required autofocus>
+                    <input type="password" class="input-field" name="password" placeholder="Password">
+                    <input type="hidden" name="role_id" value="2">
                     <button type="submit" class="submit-btn">Register</button>
                 </form>
 
-                <form id="investor" class="input-group">
-                    <input type="text" class="input-field" placeholder="Email">
-                    <input type="text" class="input-field" placeholder="Email">
-                    <input type="password" class="input-field" placeholder="Password">
+                <form action="{{ route('register') }}" method="post" id="investor" class="input-group">
+                    @csrf
+                    <input type="email" class="input-field" name="email" placeholder="Email" required autofocus>
+                    <input type="password" class="input-field" name="password" placeholder="Password">
+                    <input type="hidden" name="role_id" value="3">
                     <button type="submit" class="submit-btn">Register</button>
                 </form>
             </div>
