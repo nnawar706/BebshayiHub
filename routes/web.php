@@ -25,3 +25,6 @@ Route::get('registration_page', [AuthController::class, 'index_registration'])->
 Route::post('register', [AuthController::class, 'register'])->name('register');
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+
+Route::get('investor_dashboard', [AuthController::class, 'investor_dashboard']);

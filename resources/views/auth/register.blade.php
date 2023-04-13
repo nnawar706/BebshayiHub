@@ -9,7 +9,7 @@
                 <div class="button-box">
                     <div id="btn"></div>
                     <button type="button" class="toggle-btn" onclick="company()">
-                        Company
+                        Startup
                     </button>
                     <button type="button" class="toggle-btn" onclick="investor()">
                         Investor
@@ -19,7 +19,17 @@
                 <form action="{{ route('register') }}" method="post" id="company" class="input-group">
                     @csrf
                     <input type="email" class="input-field" name="email" placeholder="Email" required autofocus>
+
+                    @if ($errors->has('email'))
+                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                    @endif
+
                     <input type="password" class="input-field" name="password" placeholder="Password">
+
+                    @if ($errors->has('password'))
+                        <span class="text-danger">{{ $errors->first('password') }}</span>
+                    @endif
+
                     <input type="hidden" name="role_id" value="2">
                     <button type="submit" class="submit-btn">Register</button>
                 </form>

@@ -44,4 +44,9 @@ class AuthController extends Controller
 
         return redirect("welcome")->withSuccess("You have registered successfully.");
     }
+
+    public function investor_dashboard()
+    {
+        return view('auth/investor_dashboard');
+    }
 }
