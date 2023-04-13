@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Ajker Deal | Register</title>
+        <title>Bebshayi Hub | Register</title>
         <link rel="stylesheet" href="/css/auth.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>

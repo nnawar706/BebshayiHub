@@ -1,11 +1,19 @@
 <html>
     <head>
-        <title>Ajker Deal | Login</title>
+        <title>Bebshayi Hub | Login</title>
         <link rel="stylesheet" href="/css/auth.css">
     </head>
     <body>
         <div class="hero">
+            
             <div class="form-box">
+                <div class="alert-message">
+                    @if($message = Session::get('msg'))
+                    <ul class="errors">
+                        <li class="alert">{{ $message }}</li>
+                    </ul>
+                    @endif
+                </div>
                 
                 @if ($errors->any())
                 <div class="alert-danger">
@@ -16,8 +24,8 @@
                     </ul>
                 </div>
                 @endif
-
-                <form id="company" class="input-group">
+                
+                <form action="{{ route('login') }}" method="post"  id="company" class="input-group">
                     @csrf
                     <input type="email" name="email" class="input-field" placeholder="Email" autofocus>
                     
@@ -27,6 +35,7 @@
                 </form>
             </div>
         </div>
+
         <script>
             $(document).ready(function(){
                 setTimeout(function(){

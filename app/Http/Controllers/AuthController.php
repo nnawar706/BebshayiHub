@@ -34,7 +34,27 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect("welcome")->withSuccess("You have registered successfully.");
+        return redirect()->route('dashboard');
+    }
+
+    public function login(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        $credentials = $request->only('email', 'password');
+        
+        if (Auth::attempt($credentials)) 
+        {
+            return redirect()
+            ->intended('dashboard')
+            ->withSuccess('Signed in');
+        }
+        return redirect()
+        ->back()
+        ->with('msg', 'Invalid credentials.');
     }
 
     public function investor_dashboard()
