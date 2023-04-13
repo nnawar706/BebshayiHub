@@ -23,18 +23,10 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
-        $validate = Validator::make($request->all(), [
-            'email' => 'required|email',
+        $request->validate([
+            'email' => 'required|email|unique:users',
             'password' => 'required|min:8|string',
         ]);
-
-        if($validate->fails())
-        {
-            return response()->json([
-                'status' => false,
-                'error' => $validate->errors()
-            ], 422);
-        }
 
         User::create([
             'role_id' => $request->role_id,

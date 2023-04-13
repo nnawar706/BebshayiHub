@@ -6,7 +6,7 @@
 }
 
 h5 {
-	color: #7D44AA;
+	color: #4287f5;
 	font-weight: 500;
 	font-size: 20px;
 }
@@ -78,7 +78,7 @@ nav ul li a::after {
     line-height: 160px;
     margin-left: -10px;
     color: transparent;
-    -webkit-text-stroke: 1px #7D44AA;
+    -webkit-text-stroke: 1px #4287f5;
 }
 
 @keyframes back {
@@ -111,14 +111,14 @@ nav ul li a::after {
 	font-size: 45px;
 	text-transform: uppercase;
 	text-align: center;
-    color: #7D44AA;
+    color: #4287f5;
 }
 
 .hr {
 	margin: 0 auto;
 	width: 80px;
 	height: 4px;
-	background-color: #7D44AA;
+	background-color: #4287f5;
 	margin-top: 30px;
 }
 
@@ -126,8 +126,8 @@ nav ul li a::after {
 	padding: 15% 10% 10px 10% !important;
 }
 .icon {
-	color: #7D44AA;
-	border: 2px solid #7D44AA;
+	color: #4287f5;
+	border: 2px solid #4287f5;
 	width: 75px;
 	height: 75px;
 	line-height: 68px;
@@ -137,7 +137,7 @@ nav ul li a::after {
 	margin-right: 25px;
 }
 .icon i {
-	color: #7D44AA;
+	color: #4287f5;
 	margin-left: 25px;
 }
 .content {

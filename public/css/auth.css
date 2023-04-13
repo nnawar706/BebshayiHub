@@ -27,7 +27,7 @@
     width: 240px;
     margin: 35px auto;
     position: relative;
-    box-shadow: 0 0 20px 9px #ff61241f;
+    box-shadow: 0 0 20px 9px #97b1db;
     border-radius: 30px;
 }
 
@@ -46,7 +46,7 @@
     position: absolute;
     width: 130px;
     height: 100%;
-    background: linear-gradient(to right, #fff, #790973);
+    background: linear-gradient(to right, #fff, #4287f5);
     border-radius: 30px;
     transition: .5s;
 }
@@ -76,7 +76,7 @@
     cursor: pointer;
     display: block;
     margin: auto;
-    background: linear-gradient(to right, #fff, #790973);
+    background: linear-gradient(to right, #fff, #4287f5);
     border: 0;
     outline: none;
     border-radius: 30px;
@@ -88,4 +88,12 @@
 
 #investor {
     left: 450px;
+}
+
+.alert {
+    padding: 5px;
+    background-color: #97b1db;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 15px;
 }

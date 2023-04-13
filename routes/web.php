@@ -19,9 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('login_page', [AuthController::class, 'index_login'])->name('login_page');
+Route::get('login', [AuthController::class, 'index_login'])->name('login_page');
 Route::post('login', [AuthController::class, 'login'])->name('login');
-Route::get('registration_page', [AuthController::class, 'index_registration'])->name('register_page');
+Route::get('registration', [AuthController::class, 'index_registration'])->name('register_page');
 Route::post('register', [AuthController::class, 'register'])->name('register');
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');

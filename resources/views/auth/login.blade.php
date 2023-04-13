@@ -6,22 +6,33 @@
     <body>
         <div class="hero">
             <div class="form-box">
+                
+                @if ($errors->any())
+                <div class="alert-danger">
+                    <ul class="errors">
+                    @foreach ($errors->all() as $error)
+                        <li class="alert">{{ $error }}</li>
+                    @endforeach
+                    </ul>
+                </div>
+                @endif
+
                 <form id="company" class="input-group">
+                    @csrf
                     <input type="email" name="email" class="input-field" placeholder="Email" autofocus>
                     
-                    @if ($errors->has('email'))
-                        <span class="text-danger">{{ $errors->first('email') }}</span>
-                    @endif
-                    
                     <input type="password" name="password" class="input-field" placeholder="Password">
-                    
-                    @if ($errors->has('password'))
-                        <span class="text-danger">{{ $errors->first('password') }}</span>
-                    @endif
                     
                     <button type="submit" class="submit-btn">Log In</button>
                 </form>
             </div>
         </div>
+        <script>
+            $(document).ready(function(){
+                setTimeout(function(){
+                    $('.alert-danger').fadeOut('slow');
+                }, 5000);
+            });
+        </script>
     </body>
 </html>
